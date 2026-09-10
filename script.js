@@ -1,8 +1,10 @@
 const linksInternos = document.querySelectorAll('a[href^="#"]');
+const botaoMenu = document.querySelector("#botao-menu");
+const menu = document.querySelector("#menu");
 
 linksInternos.forEach((link) => {
-  link.addEventListener("click", function (evento) {
-    const href = this.getAttribute("href");
+  link.addEventListener("click", (evento) => {
+    const href = link.getAttribute("href");
 
     if (!href || href === "#") {
       return;
@@ -16,15 +18,10 @@ linksInternos.forEach((link) => {
 
     evento.preventDefault();
 
-    const posicaoInicial = window.pageYOffset;
-
-    const posicaoFinal =
-      destino.getBoundingClientRect().top + window.pageYOffset;
-
+    const posicaoInicial = window.scrollY;
+    const posicaoFinal = destino.getBoundingClientRect().top + window.scrollY;
     const distancia = posicaoFinal - posicaoInicial;
-
     const duracao = 650;
-
     let inicioAnimacao = null;
 
     function animar(tempoAtual) {
@@ -33,12 +30,11 @@ linksInternos.forEach((link) => {
       }
 
       const tempoPassado = tempoAtual - inicioAnimacao;
-
       const progresso = Math.min(tempoPassado / duracao, 1);
 
       const suavizacao =
         progresso < 0.5
-          ? 4 * progresso * progresso * progresso
+          ? 4 * progresso ** 3
           : 1 - Math.pow(-2 * progresso + 2, 3) / 2;
 
       window.scrollTo(0, posicaoInicial + distancia * suavizacao);
@@ -50,31 +46,24 @@ linksInternos.forEach((link) => {
 
     requestAnimationFrame(animar);
   });
+});
 
-  const botaoMenu = document.querySelector("#botao-menu");
-  const menu = document.querySelector("#menu");
-
+if (botaoMenu && menu) {
   botaoMenu.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
-
-    const menuAberto = menu.classList.contains("ativo");
+    const menuAberto = menu.classList.toggle("ativo");
 
     botaoMenu.setAttribute("aria-expanded", menuAberto);
-
     botaoMenu.setAttribute(
       "aria-label",
       menuAberto ? "Fechar menu" : "Abrir menu",
     );
   });
 
-  const linksMenu = menu.querySelectorAll("a");
-
-  linksMenu.forEach((link) => {
+  menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       menu.classList.remove("ativo");
-
       botaoMenu.setAttribute("aria-expanded", "false");
       botaoMenu.setAttribute("aria-label", "Abrir menu");
     });
   });
-});
+}
