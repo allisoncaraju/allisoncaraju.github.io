@@ -6,19 +6,9 @@ O projeto foi desenvolvido do zero com o objetivo de apresentar os serviços da 
 
 ## Site publicado
 
-O site está disponível em:
-
 https://allisoncaraju.github.io/
 
 ## Repositório oficial
-
-O projeto está hospedado no GitHub através da organização:
-
-```text
-allisoncaraju
-```
-
-Repositório:
 
 ```text
 https://github.com/allisoncaraju/allisoncaraju.github.io
@@ -45,7 +35,7 @@ Aracaju - SE, 49082-065
 - Font Awesome
 - Google Fonts
 
-### Fontes
+### Tipografia
 
 - **Montserrat** para títulos
 - **Inter** para textos
@@ -55,30 +45,30 @@ Aracaju - SE, 49082-065
 O site possui:
 
 - layout responsivo para desktop, tablet e celular;
-- imagem principal personalizada e otimizada;
 - menu de navegação;
 - menu mobile;
 - rolagem suave entre seções;
+- imagem principal personalizada;
 - seção de serviços;
 - cards interativos;
-- seção de orçamento presencial;
+- informações sobre orçamento presencial;
 - integração com WhatsApp;
 - integração com Google Maps;
 - integração com Instagram;
-- seção institucional da oficina;
-- informações sobre experiência profissional;
+- ligação telefônica por link;
+- seção institucional;
+- informações sobre experiência e localização;
 - seção de contato;
 - rodapé responsivo;
 - favicon personalizado;
 - acessibilidade básica;
 - navegação por teclado;
-- estrutura HTML semântica;
-- SEO básico;
+- SEO;
 - Open Graph;
 - dados estruturados em JSON-LD;
 - `robots.txt`;
 - `sitemap.xml`;
-- publicação através do GitHub Pages.
+- publicação automática através do GitHub Pages.
 
 ## Serviços apresentados
 
@@ -91,13 +81,7 @@ O site possui:
 
 Os orçamentos são realizados exclusivamente de forma presencial.
 
-O site permite ao cliente:
-
-- tirar dúvidas pelo WhatsApp;
-- consultar a localização da oficina;
-- visualizar o horário de funcionamento;
-- acessar o Instagram da oficina;
-- encontrar informações sobre os serviços oferecidos.
+O site permite ao cliente consultar informações sobre os serviços, tirar dúvidas pelo WhatsApp e encontrar a localização da oficina.
 
 ## Estrutura do projeto
 
@@ -120,38 +104,40 @@ allison-car/
 
 ### `index.html`
 
-Responsável pela estrutura e pelo conteúdo do site.
+Responsável pela estrutura e conteúdo da página.
 
-Contém:
+Inclui:
 
+- HTML semântico;
 - cabeçalho;
 - navegação;
 - conteúdo principal;
 - serviços;
-- informações sobre orçamento;
-- seção institucional;
+- orçamento;
+- informações institucionais;
 - contato;
 - rodapé;
 - metadados de SEO;
 - Open Graph;
-- dados estruturados em JSON-LD.
+- JSON-LD;
+- carregamento prioritário da imagem principal.
 
 ### `style.css`
 
-Responsável pela aparência e responsividade do site.
+Responsável pela identidade visual, layout e responsividade.
 
-O projeto utiliza:
+Utiliza recursos como:
 
 - Flexbox;
 - CSS Grid;
 - Media Queries;
-- Transitions;
-- Transforms;
-- Gradients;
-- Pseudo-elementos;
-- estados de `hover`;
-- estados de `focus`;
-- responsividade para dispositivos móveis.
+- gradients;
+- transitions;
+- transforms;
+- pseudo-elementos;
+- estados de hover;
+- estados de focus;
+- adaptação específica para dispositivos móveis.
 
 ### `script.js`
 
@@ -159,120 +145,94 @@ Responsável pelas interações do site.
 
 Atualmente controla:
 
-- rolagem suave entre seções;
+- rolagem suave entre links internos;
+- animação de rolagem com `requestAnimationFrame`;
 - abertura e fechamento do menu mobile;
-- fechamento automático do menu após selecionar uma opção;
-- atualização dos atributos de acessibilidade do menu.
+- atualização de `aria-expanded`;
+- atualização do `aria-label` do botão;
+- fechamento automático do menu após a seleção de um link.
 
-### `assets/`
-
-Diretório utilizado para os arquivos visuais do projeto.
-
-Atualmente contém:
-
-- favicon da oficina;
-- imagem principal da página.
-
-### `robots.txt`
-
-Arquivo utilizado para fornecer instruções aos mecanismos de busca.
-
-Também contém a referência para o sitemap oficial do site.
-
-### `sitemap.xml`
-
-Mapa do site utilizado para informar aos mecanismos de busca qual é a URL oficial disponível para indexação.
-
-Como o projeto atualmente é um site de página única, o sitemap possui apenas a página principal.
+O JavaScript também possui verificações para evitar erros caso elementos necessários não estejam disponíveis na página.
 
 ## Identidade visual
 
-As principais cores utilizadas são:
+As cores principais são:
 
-- **Vermelho** — cor principal
-- **Preto** — cor secundária
-- **Branco** — cor terciária
+```text
+Vermelho
+Preto
+Branco
+```
 
-O vermelho é utilizado principalmente em:
+O vermelho é utilizado principalmente em botões, ícones, bordas e elementos de destaque.
 
-- botões;
-- títulos de destaque;
-- ícones;
-- bordas;
-- interações;
-- elementos da identidade visual.
+Para pequenos textos de destaque foi utilizado um vermelho com contraste mais elevado, garantindo melhor acessibilidade sem descaracterizar a identidade visual.
 
 ## Responsividade
 
-O site foi desenvolvido para funcionar em diferentes tamanhos de tela.
+O site possui adaptação específica para telas de até:
 
-Existe uma adaptação específica para telas de até `768px`.
+```text
+768px
+```
 
 Na versão mobile:
 
-- o menu horizontal é substituído por um menu hambúrguer;
-- os cards são reorganizados em uma única coluna;
-- os tamanhos de texto são adaptados;
-- os espaçamentos são reduzidos;
-- os botões são reorganizados;
+- o menu tradicional é substituído pelo menu hambúrguer;
+- os cards passam para uma única coluna;
+- títulos e textos são redimensionados;
+- espaçamentos são reduzidos;
+- botões passam a ocupar melhor a largura disponível;
 - a imagem principal recebe enquadramento específico;
-- efeitos de hover são reduzidos quando não são necessários;
-- o rodapé passa para uma única coluna.
+- efeitos inadequados para telas touch são reduzidos;
+- o rodapé é reorganizado em uma única coluna.
 
 ## Acessibilidade
 
-Foram implementadas melhorias básicas de acessibilidade, incluindo:
+Foram implementadas melhorias de acessibilidade, incluindo:
 
+- HTML semântico;
 - navegação por teclado;
-- destaque visual com `:focus-visible`;
-- atributos `aria` no menu mobile;
-- atualização de `aria-expanded`;
-- identificação da navegação principal;
-- ícones decorativos ocultados de leitores de tela quando apropriado;
-- estrutura semântica utilizando `header`, `nav`, `main`, `section` e `footer`.
+- `:focus-visible`;
+- atributos `aria`;
+- `aria-expanded`;
+- `aria-controls`;
+- `aria-label`;
+- ícones decorativos com `aria-hidden`;
+- contraste adequado entre textos e fundos;
+- hierarquia correta de títulos;
+- um único `h1` principal.
 
 ## SEO
 
-O projeto possui configurações básicas de SEO, incluindo:
+O projeto possui:
 
 - título otimizado;
 - meta description;
-- configuração para indexação;
 - URL canônica;
+- configuração de indexação;
 - Open Graph;
 - `og:url`;
 - `og:image`;
 - `og:image:alt`;
-- identificação de idioma;
-- favicon;
+- `og:site_name`;
 - HTML semântico;
-- hierarquia de títulos;
+- hierarquia de headings;
 - `robots.txt`;
 - `sitemap.xml`;
 - dados estruturados em JSON-LD.
 
-A URL oficial configurada no projeto é:
+URL oficial:
 
 ```text
 https://allisoncaraju.github.io/
 ```
 
-Os dados estruturados identificam a Allison Car como uma empresa local do setor automotivo e incluem informações como:
+Os dados estruturados identificam a Allison Car como uma empresa local do setor automotivo e incluem informações como nome, telefone, endereço, horário de funcionamento, Instagram e ano de início das atividades.
 
-- nome;
-- endereço;
-- telefone;
-- horário de funcionamento;
-- Instagram;
-- ano de início das atividades;
-- URL oficial;
-- imagem da oficina.
+## Otimização de desempenho
 
-## Otimização
-
-A imagem principal utilizada na página foi comprimida para reduzir o tempo de carregamento.
-
-O arquivo `hero-car.jpg` foi reduzido de aproximadamente:
+A imagem principal foi comprimida de aproximadamente:
 
 ```text
 1,73 MB
@@ -284,25 +244,83 @@ para aproximadamente:
 146 KB
 ```
 
-mantendo qualidade visual adequada para utilização como imagem principal do site.
+A hero também utiliza preload e prioridade elevada:
+
+```html
+<link
+  rel="preload"
+  as="image"
+  href="assets/images/hero-car.jpg"
+  type="image/jpeg"
+  fetchpriority="high"
+/>
+```
+
+Isso permite ao navegador descobrir e carregar antecipadamente um dos recursos mais importantes da página.
+
+## Lighthouse
+
+Em um dos testes finais realizados na versão publicada, o projeto atingiu:
+
+```text
+Performance:        97
+Accessibility:     100
+Best Practices:    100
+SEO:               100
+```
+
+Métricas registradas no mesmo teste:
+
+```text
+First Contentful Paint:   1,8 s
+Largest Contentful Paint: 2,3 s
+Total Blocking Time:      0 ms
+Cumulative Layout Shift:  0
+```
+
+Os resultados de Performance podem variar entre execuções de acordo com rede, dispositivo, navegador e ambiente do teste.
+
+## Refatoração e organização
+
+Após a conclusão funcional do site, os principais arquivos foram revisados.
+
+Foram realizados:
+
+- remoção de comentários redundantes;
+- redução de linhas em branco desnecessárias;
+- padronização da formatação;
+- remoção de metadados duplicados;
+- melhoria na organização do JavaScript;
+- correção de listeners duplicados do menu;
+- inclusão de `type="button"` no botão do menu;
+- melhoria dos atributos de acessibilidade;
+- preservação apenas de comentários que documentam decisões técnicas relevantes.
+
+O código permanece legível e não foi minificado, permitindo manutenção e estudo.
 
 ## Hospedagem
 
 O site utiliza **GitHub Pages**.
 
-A publicação é feita diretamente através da branch:
+Repositório:
+
+```text
+allisoncaraju/allisoncaraju.github.io
+```
+
+Branch utilizada:
 
 ```text
 main
 ```
 
-e da pasta:
+Diretório publicado:
 
 ```text
 / (root)
 ```
 
-URL pública:
+URL:
 
 ```text
 https://allisoncaraju.github.io/
@@ -310,7 +328,7 @@ https://allisoncaraju.github.io/
 
 ## Controle de versão
 
-O projeto utiliza Git para controle de versão.
+O projeto utiliza Git.
 
 O repositório principal está configurado como:
 
@@ -324,11 +342,11 @@ apontando para:
 https://github.com/allisoncaraju/allisoncaraju.github.io.git
 ```
 
-O repositório original também foi preservado como backup.
+O repositório criado originalmente na conta pessoal foi preservado como backup.
 
 ## Fluxo para futuras atualizações
 
-Após realizar alterações no projeto:
+Após alterar algum arquivo:
 
 ```bash
 git status
@@ -340,7 +358,7 @@ Adicionar as alterações:
 git add .
 ```
 
-Criar um commit:
+Criar o commit:
 
 ```bash
 git commit -m "Descrição da alteração"
@@ -352,52 +370,16 @@ Enviar para o GitHub:
 git push
 ```
 
-Após o `push`, o GitHub Pages atualiza automaticamente a versão publicada do site.
+O GitHub Pages realizará automaticamente uma nova publicação.
 
 ## Como executar localmente
 
-### Opção 1 - Abrir diretamente
+Com o projeto aberto no Visual Studio Code, é possível abrir o `index.html` diretamente no navegador ou utilizar a extensão **Live Server**.
 
-Abra:
-
-```text
-index.html
-```
-
-em um navegador moderno.
-
-### Opção 2 - Live Server
-
-No Visual Studio Code:
-
-1. Instale a extensão **Live Server**.
-2. Abra o arquivo `index.html`.
-3. Execute **Open with Live Server**.
-4. O projeto será aberto no navegador.
-
-Exemplo:
+Com Live Server:
 
 ```text
 http://127.0.0.1:5500
-```
-
-## Testar no celular
-
-Para testar o projeto em um celular conectado à mesma rede local do computador:
-
-1. Execute o site com Live Server.
-2. Abra o Prompt de Comando do Windows.
-3. Execute:
-
-```text
-ipconfig
-```
-
-4. Localize o endereço IPv4 do computador.
-5. No navegador do celular, acesse:
-
-```text
-http://IP-DO-COMPUTADOR:5500
 ```
 
 ## Contato da oficina
@@ -423,66 +405,20 @@ Aracaju - SE, 49082-065
 
 ## Horário de funcionamento
 
-### Segunda a sexta
-
 ```text
-08:00 às 18:30
-```
-
-### Sábado
-
-```text
-08:00 às 13:00
-```
-
-### Domingo
-
-```text
-Fechado
+Segunda a sexta: 08:00 às 18:30
+Sábado:          08:00 às 13:00
+Domingo:         Fechado
 ```
 
 ## Status do projeto
 
-### Projeto publicado
+### Versão 1.0
 
-O site está atualmente online e funcional.
+A primeira versão do site está concluída, publicada e funcional.
 
-### Concluído
+A versão atual inclui estrutura completa, responsividade, acessibilidade, SEO, integrações externas, otimização de desempenho, controle de versão e publicação automática.
 
-- estrutura HTML;
-- identidade visual;
-- tipografia;
-- imagem principal;
-- serviços;
-- orçamento presencial;
-- seção institucional;
-- contato;
-- integrações externas;
-- rodapé;
-- responsividade;
-- menu mobile;
-- acessibilidade básica;
-- SEO básico;
-- favicon;
-- Open Graph;
-- dados estruturados;
-- otimização da imagem principal;
-- HTML semântico;
-- `robots.txt`;
-- `sitemap.xml`;
-- configuração Git;
-- repositório oficial;
-- organização no GitHub;
-- publicação no GitHub Pages;
-- URL pública oficial.
+## Melhorias futuras
 
-### Próximas melhorias possíveis
-
-- testes de desempenho com Lighthouse;
-- validação dos dados estruturados;
-- acompanhamento da indexação nos mecanismos de busca;
-- criação de novas páginas caso o site cresça;
-- inclusão de fotos reais dos serviços;
-- criação de uma galeria de trabalhos;
-- possíveis melhorias de SEO local;
-- futuras atualizações de conteúdo.
+O desenvolvimento futuro poderá incluir galeria de trabalhos, comparações de antes e depois, fotos reais da oficina, avaliações de clientes, novas páginas, acompanhamento de indexação, melhorias de SEO local e outras funcionalidades conforme surgir necessidade.
