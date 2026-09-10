@@ -1,183 +1,143 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO BÁSICO -->
+    <!-- SEO BÁSICO -->
 
-  <title>Allison Car | Pintura Automotiva em Aracaju</title>
+    <title>Allison Car | Pintura Automotiva em Aracaju</title>
 
-  <meta
-    name="description"
-    content="Oficina de pintura automotiva em Aracaju-SE. Pintura, montagem de peças e avaliação presencial. Allison Car, desde 2015."
-  >
+    <meta
+      name="description"
+      content="Oficina de pintura automotiva em Aracaju-SE. Pintura, montagem de peças e avaliação presencial. Allison Car, desde 2015."
+    />
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+    <meta name="robots" content="index, follow" />
 
-  <meta
-    name="theme-color"
-    content="#e00000"
-  >
+    <meta name="theme-color" content="#e00000" />
 
-<!-- URL OFICIAL -->
+    <!-- URL OFICIAL -->
 
-<link
-  rel="canonical"
-  href="https://allisoncaraju.github.io/"
->
+    <link rel="canonical" href="https://allisoncaraju.github.io/" />
 
-<!-- CARREGAMENTO PRIORITÁRIO DA IMAGEM PRINCIPAL -->
+    <!-- CARREGAMENTO PRIORITÁRIO DA IMAGEM PRINCIPAL -->
 
-<link
-  rel="preload"
-  as="image"
-  href="assets/images/hero-car.jpg"
-  type="image/jpeg"
->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/hero-car.jpg"
+      type="image/jpeg"
+      fetchpriority="high"
+    />
+    <!-- COMPARTILHAMENTO EM REDES SOCIAIS -->
 
-<!-- COMPARTILHAMENTO EM REDES SOCIAIS -->
+    <meta
+      property="og:title"
+      content="Allison Car | Pintura Automotiva em Aracaju"
+    />
 
-<meta
-  property="og:title"
-  content="Allison Car | Pintura Automotiva em Aracaju"
->
+    <!-- COMPARTILHAMENTO EM REDES SOCIAIS -->
 
-  <!-- COMPARTILHAMENTO EM REDES SOCIAIS -->
+    <meta
+      property="og:title"
+      content="Allison Car | Pintura Automotiva em Aracaju"
+    />
 
-  <meta
-    property="og:title"
-    content="Allison Car | Pintura Automotiva em Aracaju"
-  >
+    <meta
+      property="og:description"
+      content="Pintura automotiva, montagem de peças e avaliação presencial em Aracaju-SE. Oficina em atividade desde 2015."
+    />
 
-  <meta
-    property="og:description"
-    content="Pintura automotiva, montagem de peças e avaliação presencial em Aracaju-SE. Oficina em atividade desde 2015."
-  >
+    <meta property="og:type" content="website" />
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+    <meta property="og:locale" content="pt_BR" />
 
-  <meta
-    property="og:locale"
-    content="pt_BR"
-  >
+    <meta property="og:url" content="https://allisoncaraju.github.io/" />
 
-  <meta
-    property="og:url"
-    content="https://allisoncaraju.github.io/"
-  >
+    <meta
+      property="og:image"
+      content="https://allisoncaraju.github.io/assets/images/hero-car.jpg"
+    />
 
-  <meta
-    property="og:image"
-    content="https://allisoncaraju.github.io/assets/images/hero-car.jpg"
-  >
+    <meta
+      property="og:image:alt"
+      content="Veículo em oficina de pintura automotiva Allison Car"
+    />
 
-  <meta
-    property="og:image:alt"
-    content="Veículo em oficina de pintura automotiva Allison Car"
-  >
+    <meta property="og:site_name" content="Allison Car - Pintura Automotiva" />
 
-  <meta
-    property="og:site_name"
-    content="Allison Car - Pintura Automotiva"
-  >
+    <!-- GOOGLE FONTS -->
 
-  <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
-    rel="stylesheet"
-  >
+    <!-- FONT AWESOME -->
 
-  <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  >
+    <!-- FAVICON -->
 
-  <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="assets/favicon.png"
-  >
+    <!-- CSS DO PROJETO -->
 
-  <!-- CSS DO PROJETO -->
+    <link rel="stylesheet" href="style.css" />
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+    <!-- DADOS ESTRUTURADOS DA OFICINA -->
 
-  <!-- DADOS ESTRUTURADOS DA OFICINA -->
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoBodyShop",
-    "name": "Allison Car Pintura Automotiva",
-    "url": "https://allisoncaraju.github.io/",
-    "image": "https://allisoncaraju.github.io/assets/images/hero-car.jpg",
-    "description": "Oficina de pintura automotiva em Aracaju, Sergipe, atuando desde 2015 com serviços de pintura automotiva e montagem de peças.",
-    "telephone": "+5579998437032",
-    "foundingDate": "2015-01",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Av. Brasil, 358 - Novo Paraíso",
-      "addressLocality": "Aracaju",
-      "addressRegion": "SE",
-      "postalCode": "49082-065",
-      "addressCountry": "BR"
-    },
-    "openingHoursSpecification": [
+    <script type="application/ld+json">
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
+        "@context": "https://schema.org",
+        "@type": "AutoBodyShop",
+        "name": "Allison Car Pintura Automotiva",
+        "url": "https://allisoncaraju.github.io/",
+        "image": "https://allisoncaraju.github.io/assets/images/hero-car.jpg",
+        "description": "Oficina de pintura automotiva em Aracaju, Sergipe, atuando desde 2015 com serviços de pintura automotiva e montagem de peças.",
+        "telephone": "+5579998437032",
+        "foundingDate": "2015-01",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Brasil, 358 - Novo Paraíso",
+          "addressLocality": "Aracaju",
+          "addressRegion": "SE",
+          "postalCode": "49082-065",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "13:00"
+          }
         ],
-        "opens": "08:00",
-        "closes": "18:30"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "13:00"
+        "sameAs": ["https://www.instagram.com/allisoncar_/"]
       }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/allisoncar_/"
-    ]
-  }
-  </script>
-</head>
+    </script>
+  </head>
 
   <body>
     <header class="cabecalho">
